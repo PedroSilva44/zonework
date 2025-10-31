@@ -1,7 +1,7 @@
-// src/index.jsx
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss'; // <- SEU SCSS GLOBAL
+import './index.scss';
 import Navegacao from './router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

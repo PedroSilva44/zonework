@@ -16,8 +16,7 @@ export default function Bicos() {
 
       <section className='secao'>
         <h1>Bicos e Freelas</h1>
-        <p>Encontre serviços de curta duração na sua região.</p>
-        {/* Lista de bicos será implementada aqui */}
+        <p>Página de bicos e freelas em desenvolvimento...</p>
       </section>
     </div>
   );
