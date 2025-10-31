@@ -7,11 +7,13 @@ import Bicos from './pages/bicos';
 import Empregador from './pages/empregador';
 import Perfil from './pages/perfil';
 import NaoEncontrado from './pages/naoEncontrado';
+import Inicio from './pages/inicio/index.jsx';
 
 export default function Navegacao() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path='/inicio' element={ <Inicio/> } />
                 <Route path='/' element={<App />} />
                 <Route path='/vagas' element={<Vagas />} />
                 <Route path='/bicos' element={<Bicos />} />
