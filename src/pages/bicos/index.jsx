@@ -6,11 +6,13 @@ export default function Bicos() {
   return (
     <div className="pagina-bicos pagina">
       <header className='cabecalho'>
-        <Link to="/" className="logo-link">
-          <h1 className='titulo1'> 
-            ZoneWork 
-            <i className='fa fa-briefcase'></i>
-          </h1>
+        <div className='card-logo'>
+        <img src="./zonework1.png" alt='logo do zonework'/>
+        </div>
+        <Link to='/' className='logo-link'>
+        <h1 className='titulo1'> 
+          ZoneWork
+        </h1>
         </Link>
       </header>
 

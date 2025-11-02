@@ -24,7 +24,7 @@ export default function Empregador() {
       salario: '1500-2000',
       descricao: 'Procuramos vendedor para loja no centro...',
       status: 'ativa',
-      candidatos: 5,
+      candidatos: 0,
       data: '2024-01-15'
     }
   ]);
@@ -41,7 +41,7 @@ export default function Empregador() {
     semCurriculo: false
   });
 
-  const [abaAtiva, setAbaAtiva] = useState('dashboard');
+  const [abaAtiva, setAbaAtiva] = useState('painel');
 
   const criarVaga = (e) => {
     e.preventDefault();
@@ -84,11 +84,13 @@ export default function Empregador() {
   return (
     <div className="pagina-empregador pagina">
       <header className='cabecalho'>
-        <Link to="/" className="logo-link">
-          <h1 className='titulo1'> 
-            ZoneWork 
-            <i className='fa fa-briefcase'></i>
-          </h1>
+        <div className='card-logo'>
+        <img src="./zonework1.png" alt='logo do zonework'/>
+        </div>
+        <Link to='/' className='logo-link'>
+        <h1 className='titulo1'> 
+          ZoneWork
+        </h1>
         </Link>
       </header>
 
@@ -101,10 +103,10 @@ export default function Empregador() {
         {/* Navegação por Abas */}
         <div className="abas-navegacao">
           <button 
-            className={`aba ${abaAtiva === 'dashboard' ? 'ativa' : ''}`}
-            onClick={() => setAbaAtiva('dashboard')}
+            className={`aba ${abaAtiva === 'painel' ? 'ativa' : ''}`}
+            onClick={() => setAbaAtiva('painel')}
           >
-            <i className="fa fa-chart-bar"></i> Dashboard
+            <i className="fa fa-chart-bar"></i> Painel
           </button>
           <button 
             className={`aba ${abaAtiva === 'vagas' ? 'ativa' : ''}`}
@@ -129,9 +131,9 @@ export default function Empregador() {
         {/* Conteúdo das Abas */}
         <div className="conteudo-aba">
           
-          {/* Dashboard */}
-          {abaAtiva === 'dashboard' && (
-            <div className="dashboard">
+          {/* Painel */}
+          {abaAtiva === 'painel' && (
+            <div className="painel">
               <div className="stats-grid">
                 <div className="stat-card">
                   <div className="stat-icon">
@@ -158,7 +160,7 @@ export default function Empregador() {
                     <i className="fa fa-eye"></i>
                   </div>
                   <div className="stat-info">
-                    <h3>1.2k</h3>
+                    <h3>0</h3>
                     <p>Visualizações</p>
                   </div>
                 </div>

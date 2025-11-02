@@ -6,8 +6,8 @@ import Vagas from './pages/vagas';
 import Bicos from './pages/bicos';
 import Empregador from './pages/empregador';
 import Perfil from './pages/perfil';
+import Inicio from './pages/inicio';
 import NaoEncontrado from './pages/naoEncontrado';
-import Inicio from './pages/inicio/index.jsx';
 
 export default function Navegacao() {
     return (

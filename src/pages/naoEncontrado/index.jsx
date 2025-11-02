@@ -7,8 +7,7 @@ export default function NaoEncontrado() {
     <div className="pagina-nao-encontrado pagina">
       <header className='cabecalho'>
         <h1 className='titulo1'> 
-          ZoneWork 
-          <i className='fa fa-briefcase'></i>
+          ZoneWork
         </h1>
       </header>
 

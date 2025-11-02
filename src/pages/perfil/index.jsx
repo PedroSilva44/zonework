@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 
 export default function Perfil() {
   const [perfil, setPerfil] = useState({
-    nome: 'Seu Nome',
-    email: 'seu.email@exemplo.com',
-    telefone: '(11) 99999-9999',
-    localizacao: 'São Paulo, SP',
+    nome: '',
+    email: '',
+    telefone: '',
+    localizacao: '',
     habilidades: ['Atendimento', 'Vendas', 'Organização'],
-    experiencia: 'Iniciante',
-    tipoVaga: 'presencial',
-    disponibilidade: 'imediata',
-    pitch: 'Sou uma pessoa dedicada e com vontade de aprender novas habilidades...'
+    experiencia: '',
+    tipoVaga: '',
+    disponibilidade: '',
+    sobre: 'Sou uma pessoa dedicada e com vontade de aprender novas habilidades...'
   });
 
   const [novaHabilidade, setNovaHabilidade] = useState('');
@@ -36,7 +36,7 @@ export default function Perfil() {
   };
 
   const salvarPerfil = () => {
-    // Aqui você integrará com a API depois
+    // integrar com a API depois
     alert('Perfil salvo com sucesso!');
     console.log('Perfil salvo:', perfil);
   };
@@ -44,11 +44,13 @@ export default function Perfil() {
   return (
     <div className="pagina-perfil pagina">
       <header className='cabecalho'>
-        <Link to="/" className="logo-link">
-          <h1 className='titulo1'> 
-            ZoneWork 
-            <i className='fa fa-briefcase'></i>
-          </h1>
+        <div className='card-logo'>
+        <img src="./zonework1.png" alt='logo do zonework'/>
+        </div>
+        <Link to='/' className='logo-link'>
+        <h1 className='titulo1'> 
+          ZoneWork
+        </h1>
         </Link>
       </header>
 
@@ -58,9 +60,9 @@ export default function Perfil() {
           <p>Complete seu perfil para encontrar vagas que combinam com você</p>
         </div>
 
-        {/* Informações Pessoais */}
+
         <div className="perfil-secao">
-          <h2>📝 Informações Pessoais</h2>
+          <h2>Informações Pessoais</h2>
           
           <div className="form-grid">
             <div className="form-group">
@@ -105,9 +107,10 @@ export default function Perfil() {
           </div>
         </div>
 
-        {/* Habilidades */}
+
+
         <div className="perfil-secao">
-          <h2>💼 Habilidades</h2>
+          <h2>Habilidades</h2>
           <p>Adicione suas principais habilidades (ex: atendimento, vendas, organização)</p>
           
           <div className="habilidades-input">
@@ -141,9 +144,9 @@ export default function Perfil() {
           </div>
         </div>
 
-        {/* Preferências de Trabalho */}
+
         <div className="perfil-secao">
-          <h2>⚙️ Preferências de Trabalho</h2>
+          <h2>Preferências de Trabalho</h2>
           
           <div className="form-grid">
             <div className="form-group">
@@ -182,25 +185,26 @@ export default function Perfil() {
                 <option value="1semana">1 semana</option>
                 <option value="2semanas">2 semanas</option>
                 <option value="1mes">1 mês</option>
+                <option value="+1mes">+ 1 mês</option>
               </select>
             </div>
           </div>
         </div>
 
-        {/* Pitch Pessoal */}
+        {/* Sobre Pessoal */}
         <div className="perfil-secao">
-          <h2>🎤 Pitch Pessoal</h2>
+          <h2>Um pouco de Você</h2>
           <p>Fale um pouco sobre você (30 segundos de leitura)</p>
           
           <textarea 
-            value={perfil.pitch}
-            onChange={(e) => setPerfil({...perfil, pitch: e.target.value})}
+            value={perfil.sobre}
+            onChange={(e) => setPerfil({...perfil, sobre: e.target.value})}
             placeholder="Conte brevemente sobre suas experiências, objetivos e por que você seria uma boa contratação..."
             rows="5"
-            className="pitch-textarea"
+            className="sobre-textarea"
           />
           <div className="contador-caracteres">
-            {perfil.pitch.length}/500 caracteres
+            {perfil.sobre.length}/500 caracteres
           </div>
         </div>
 
@@ -209,29 +213,17 @@ export default function Perfil() {
           <button className="btn-primario" onClick={salvarPerfil}>
             <i className="fa fa-save"></i> Salvar Perfil
           </button>
-          
-          <button className="btn-secundario">
-            <i className="fa fa-download"></i> Baixar Currículo
-          </button>
-          
+
           <button className="btn-link">
             <i className="fa fa-eye"></i> Visualizar Como Empregador
           </button>
         </div>
 
-        {/* Estatísticas Rápidas */}
+        {/* Estatísticas */}
         <div className="perfil-stats">
           <div className="stat-card">
-            <h3>5</h3>
+            <h3>0</h3>
             <p>Candidaturas</p>
-          </div>
-          <div className="stat-card">
-            <h3>2</h3>
-            <p>Entrevistas</p>
-          </div>
-          <div className="stat-card">
-            <h3>85%</h3>
-            <p>Perfil Completo</p>
           </div>
         </div>
       </section>
