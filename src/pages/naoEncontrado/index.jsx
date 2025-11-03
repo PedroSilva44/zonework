@@ -16,8 +16,8 @@ export default function NaoEncontrado() {
         <p>Desculpe, a página que você está procurando não existe.</p>
         
         <div className="voltar-home">
-          <Link to="/" className='btn-primario'>
-            ← Voltar para Home
+          <Link to="/home" className='botao-voltar'>
+            ← Ir para Home
           </Link>
         </div>
       </section>
