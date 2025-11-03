@@ -9,7 +9,7 @@ export default function Perfil() {
     email: '',
     telefone: '',
     localizacao: '',
-    habilidades: ['Atendimento', 'Vendas', 'Organização'],
+    habilidades: [],
     experiencia: '',
     tipoVaga: '',
     disponibilidade: '',

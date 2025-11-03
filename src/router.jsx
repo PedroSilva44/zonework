@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import App from './pages/app';
+import Home from './pages/home';
 import Vagas from './pages/vagas';
 import Bicos from './pages/bicos';
 import Empregador from './pages/empregador';
@@ -13,8 +13,8 @@ export default function Navegacao() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/inicio' element={ <Inicio/> } />
-                <Route path='/' element={<App />} />
+                <Route path='/' element={ <Inicio/> } />
+                <Route path='/home' element={<Home />} />
                 <Route path='/vagas' element={<Vagas />} />
                 <Route path='/bicos' element={<Bicos />} />
                 <Route path='/empregador' element={<Empregador />} />

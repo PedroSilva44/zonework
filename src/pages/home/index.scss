@@ -1,15 +1,13 @@
 
-.pagina-app {
+.pagina-home {
+
+
   .titulo1 {
     color: #0084FF;
     display: flex;
     align-items: center;
     gap: 10px;
     
-    .fa-briefcase {
-      color: #FF6B6B;
-      font-size: 32px;
-    }
   }
 
   .campo-busca {
@@ -23,7 +21,7 @@
     font-size: 16px;
   }
 
-  .btn-primario {
+  .botao-buscar {
     background-color: #0084FF;
     color: #fff;
     padding: 15px 30px;
@@ -39,7 +37,7 @@
     }
   }
 
-  .btn-urgente {
+  .botao-urgente {
     background-color: #FF6B6B;
     color: #fff;
     padding: 15px 25px;
@@ -110,5 +108,6 @@
       font-size: 14px;
       font-weight: 500;
     }
+
   }
 }

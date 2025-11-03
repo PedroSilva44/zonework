@@ -1,0 +1,27 @@
+
+
+
+.badge-urgente {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b35, #ff8e53);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  /* Efeitos visuais */
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+  animation: pulse 2s infinite;
+  
+  /* Para destacar ainda mais */
+  border: 1px solid #ff8e53;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

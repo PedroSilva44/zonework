@@ -2,9 +2,9 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 
-export default function App() {
+export default function Home() {
   return (
-    <div className="pagina-app pagina">
+    <div className="pagina-home pagina">
        <header className='cabecalho'>
           <div className='card-logo'>
           <img src="./zonework1.png" alt='logo do zonework'/>
@@ -27,20 +27,20 @@ export default function App() {
         />
         <br /><br />
         
-        {/* Filtro de Distância */}
+
         <select className='filtro-distancia'>
           <option>Até 1km</option>
           <option>Até 5km</option>
           <option>Até 10km</option>
           <option>Até 20km</option>
+          <option>Até (CasaDoKrlh)km²</option>
         </select>
         <br /><br />
 
-        {/* Botões de Ação */}
-        <button className='btn-primario'>Buscar Vagas</button>
-        <button className='btn-urgente'>
-          🚨 Oportunidade Urgente
-        </button>
+
+
+        <button className='botao-buscar'>Buscar Vagas</button>
+        <button className='botao-urgente'>🚨 Oportunidade Urgente</button>
         
         {/* Navegação */}
         <ul className='lista-links'>
@@ -64,7 +64,7 @@ export default function App() {
       <section className='secao'>
         <h2>Vagas na Sua Área</h2>
         <div className='lista-vagas'>
-          {/* Vagas serão carregadas aqui */}
+          {/* Terão vagas aqui */}
           <div className='vaga-card'>
             <h3>Garçom</h3>
             <p>Restaurante do Zé - 1.2km</p>
