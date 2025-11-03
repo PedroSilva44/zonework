@@ -14,12 +14,21 @@ export default function Inicio() {
               ZoneWork
             </h1>
           </Link>
+
+          <ul className='botoes-link'>
+          <li>
+            <Link to='/empregador'>Sou Empregador</Link>
+          </li>
+          <li>
+            <Link to='/perfil'>Meu Perfil</Link>
+          </li>
+          </ul>
         </header>
 
         <section className='secao'>
           <div className="conteudo-texto">
             <h1>
-              Cadastre-se e descubra novas <br /> oportunidades no ZoneWork!
+              Cadastre-se e descubra novas oportunidades no ZoneWork!
             </h1>
             <p>Encontre as melhores oportunidades de trabalho e conecte-se com profissionais</p>
             <div className="botoes-acao">
