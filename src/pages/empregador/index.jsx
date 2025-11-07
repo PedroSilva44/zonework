@@ -378,9 +378,6 @@ export default function Empregador() {
                   <button type="submit" className="btn-primario btn-grande">
                     <i className="fa fa-paper-plane"></i> Publicar Vaga
                   </button>
-                  <button type="button" className="btn-secundario">
-                    Salvar Rascunho
-                  </button>
                 </div>
               </form>
             </div>
