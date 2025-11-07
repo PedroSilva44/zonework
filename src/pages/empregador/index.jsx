@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
  
 export default function Empregador() {
   const [empresa, setEmpresa] = useState({
-    nome: 'Minha Empresa',
+    nome: '',
     cnpj: '12.345.678/0001-90',
-    telefone: '(11) 99999-9999',
-    email: 'contato@empresa.com',
-    endereco: 'Rua Exemplo, 123 - São Paulo, SP',
+    telefone: '',
+    email: '',
+    endereco: '',
     sobre: 'Uma empresa focada em...',
-    setor: 'comercio'
+    setor: ''
   });
 
   const [vagas, setVagas] = useState([
@@ -128,8 +128,9 @@ export default function Empregador() {
           </button>
         </div>
 
-        {/* Conteúdo das Abas */}
-        <div className="conteudo-aba">
+
+        {/* Divisão das Abas */}
+        <div className="divisao-aba">
           
           {/* Painel */}
           {abaAtiva === 'painel' && (

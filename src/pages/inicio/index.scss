@@ -11,12 +11,12 @@
 
     h1 {
       display: flex;
-      margin-right: 560px;
     }
 
 
 
     .botoes-link {
+      margin-left: 560px;
       text-decoration: none;
       gap: 20px;
       padding: 0;
@@ -58,7 +58,7 @@
 
   }
 
-  
+  // background-color: #333fe9;
 
   .secao {
     background-color: #1100ff;
@@ -80,6 +80,7 @@
       color: #fff;
 
       h1 {
+        color: #000000;
         font: 600 42px 'Poppins';
         margin-bottom: 25px;
         line-height: 1.1;

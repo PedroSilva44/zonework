@@ -7,6 +7,8 @@ import Bicos from './pages/bicos';
 import Empregador from './pages/empregador';
 import Perfil from './pages/perfil';
 import Inicio from './pages/inicio';
+import Cadastro from './pages/cadastro'
+
 import NaoEncontrado from './pages/naoEncontrado';
 
 export default function Navegacao() {
@@ -19,6 +21,8 @@ export default function Navegacao() {
                 <Route path='/bicos' element={<Bicos />} />
                 <Route path='/empregador' element={<Empregador />} />
                 <Route path='/perfil' element={<Perfil />} />
+                <Route path='/cadastro' element={<Cadastro />} />
+
                 <Route path='*' element={<NaoEncontrado />} />
             </Routes>
         </BrowserRouter>

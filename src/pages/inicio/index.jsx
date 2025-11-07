@@ -35,7 +35,7 @@ export default function Inicio() {
               <Link to="/cadastro" className="botao botao-cadastro">
                 Cadastrar
               </Link>
-              <Link to="/login" className="botao botao-login">
+              <Link to="/entrar" className="botao botao-login">
                 Entrar
               </Link>
             </div>

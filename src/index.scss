@@ -48,7 +48,7 @@ a,a:visited,a:link {
     box-shadow: 0px 0px 15px 2px #d2d2d2;
     border-radius: 8px;
     margin: 50px 60px;
-    max-width: 1000px;
+    max-width: 1200px;
     font: 400 22px 'Poppins';
 
     h1 {
@@ -65,6 +65,7 @@ a,a:visited,a:link {
       border-width: 2px;
       color: #002a9c;
       min-width: 400px;
+      width: 40%;
       font: 400 22px 'Poppins';
       outline: none;
     }
@@ -80,10 +81,13 @@ a,a:visited,a:link {
       cursor: pointer;
       
       &:hover {
-        background-color: #0066CC;
+        background-color: #1100ff;
       }
     }
   }
+
+  // 0066CC
+  // 
 
   .logo-link {
   text-decoration: none;

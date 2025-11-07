@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro — ZoneWork</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00000020;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #007bff;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005fcc;
+        }
+
+        .login {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Cadastro</h2>
+
+    <form id="cadastroForm">
+        <input type="text" id="full_name" placeholder="Nome completo" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="password" placeholder="Senha" required>
+
+        <select id="role">
+            <option value="candidate">Candidato</option>
+            <option value="employer">Empresa</option>
+        </select>
+
+        <button type="submit">Criar Conta</button>
+    </form>
+
+    <div class="login">
+        Já tem conta? <a href="#">Entrar</a>
+    </div>
+</div>
+
+<script>
+document.getElementById("cadastroForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const payload = {
+        full_name: document.getElementById("full_name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        role: document.getElementById("role").value
+    };
+
+    try {
+        const resp = await fetch("http://localhost:3000/auth/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
+
+        const data = await resp.json();
+        alert(JSON.stringify(data, null, 2));
+    } catch (err) {
+        alert("Erro ao conectar com o servidor.");
+    }
+});
+</script>
+
+</body>
+</html>
