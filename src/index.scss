@@ -14,8 +14,18 @@ a,a:visited,a:link {
 }
 
 .pagina {
-  background-color: #fff;
+
+  background-image: url('https://img.freepik.com/vetores-premium/fundo-de-cor-azul-simples-com-gradiente-de-cor-com-textura-lisa_768131-988.jpg?semt=ais_hybrid&w=740&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
+  position: relative;
+
+
+  background-color: #2482cf;
+  min-height: 100vh;
+  padding-bottom: 1px;
 
   .cabecalho {
     background-color: #b9b9b9;

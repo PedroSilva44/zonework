@@ -4,10 +4,12 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
+  background-image: none;
 
   .cabecalho {
     background-color: #fff;
-    padding: 20px 60px;
+    padding: 10px 60px;
 
     h1 {
       display: flex;

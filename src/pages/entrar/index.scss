@@ -1,6 +1,6 @@
 
 
-.pagina-cadastro {
+.pagina-entrar {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -35,7 +35,7 @@
         p {
             font: 400 15px "Poppins";
 
-            .botao-entrar {
+            .botao-cadastro {
                 color: #2482cf;
                 text-decoration: underline;
                 transition: all 0.2s ease;
@@ -47,7 +47,7 @@
             }
         }
 
-        .botao-cadastrar {
+        .botao-entrar {
             border-radius: 100px;
             width: 45%;
             background-color: #1100ff;

@@ -2,15 +2,16 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 
-export default function Cadastro() {
+export default function Entrar() {
 
-    function Cadastrado() {
-        alert("Cadastro realizado com sucesso!")
+
+    function Entrou() {
+        alert("Você entrou em sua conta com sucesso!")
     }
 
 
     return (
-        <div className='pagina-cadastro pagina'>
+        <div className='pagina-entrar pagina'>
         <header className='cabecalho'>
             <div className='card-logo'>
             <img src="./zonework1.png" alt='logo do zonework'/>
@@ -23,18 +24,16 @@ export default function Cadastro() {
         </header>
         
         <div className='secao'>
-            <h1>Cadastro</h1>
+            <h1>Entrar</h1>
             
-            <h3>Usuário:</h3>
-            <input type="text" placeholder="usuario123"/> <br />
             <h3>Email:</h3>
             <input type="email" placeholder="exemplo.123@gmail.com"/> <br />
             <h3>Senha:</h3>
             <input type="password" placeholder="senha" /> <br />
 
-            <p>Já possui cadastro? <Link to="/entrar" className='botao-entrar'>Entrar</Link></p> <br />
+            <p>Não possui cadastro? <Link to="/cadastro" className='botao-cadastro'>Cadastrar</Link></p> <br />
 
-            <button onClick={Cadastrado}  className='botao-cadastrar'>Cadastar</button>
+            <button className='botao-entrar' onClick={Entrou}>Entrar</button>
 
         </div>
 
