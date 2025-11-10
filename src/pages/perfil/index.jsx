@@ -1,6 +1,6 @@
 
 import './index.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Perfil() {
@@ -17,6 +17,23 @@ export default function Perfil() {
   });
 
   const [novaHabilidade, setNovaHabilidade] = useState('');
+  const [isCadastrado, setIsCadastrado] = useState(false);
+
+  useEffect(() => {
+    const usuarioSalvo = localStorage.getItem("usuario");
+    if (usuarioSalvo) {
+      const dados = JSON.parse(usuarioSalvo);
+
+      setPerfil((prev) => ({
+        ...prev,
+        usuario: dados.usuario || '',
+        email: dados.email || ''
+      }));
+
+      // Marca como "cadastrado" se tiver ID (ou outra verificação que quiser)
+      setIsCadastrado(!!dados.id);
+    }
+  }, [])
 
   const adicionarHabilidade = () => {
     if (novaHabilidade && !perfil.habilidades.includes(novaHabilidade)) {
@@ -55,6 +72,12 @@ export default function Perfil() {
       </header>
 
       <section className='secao'>
+        <div className="perfil-info-usuario">
+          <p>
+            Logado como: <strong>{perfil.usuario || 'Usuário'}</strong>
+          </p>
+        </div>
+
         <div className="perfil-header">
           <h1>Meu Perfil</h1>
           <p>Complete seu perfil para encontrar vagas que combinam com você</p>
@@ -65,6 +88,7 @@ export default function Perfil() {
           <h2>Informações Pessoais</h2>
           
           <div className="form-grid">
+            {isCadastrado && (
             <div className="form-group">
               <label>Nome Completo</label>
               <input 
@@ -74,6 +98,7 @@ export default function Perfil() {
                 placeholder="Seu nome completo"
               />
             </div>
+            )}
 
             <div className="form-group">
               <label>E-mail</label>

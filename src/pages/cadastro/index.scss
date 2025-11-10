@@ -28,9 +28,13 @@
             font: 400 25px "Poppins";
         }
 
-        input {
+        input, select {
             border-radius: 100px;
+            color: inherit;
         }
+
+
+
 
         p {
             font: 400 15px "Poppins";
