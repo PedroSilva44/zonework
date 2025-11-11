@@ -14,6 +14,22 @@ export default function Home() {
             ZoneWork
            </h1>
            </Link>
+
+
+           <ul className='botoes-link'>
+          <li>
+            <Link to='/vagas'>Ver Vagas</Link>
+          </li>
+          <li>
+            <Link to='/bicos'>Bicos e Freelas</Link>
+          </li>
+          <li>
+            <Link to='/perfil'>Sou Candidato</Link>
+          </li>
+          <li>
+            <Link to='/empregador'>Sou Empresa</Link>
+          </li>
+          </ul>
          </header>
 
       <section className='secao'>
@@ -41,22 +57,6 @@ export default function Home() {
 
         <button className='botao-buscar'>Buscar Vagas</button>
         <button className='botao-urgente'>🚨 Oportunidade Urgente</button>
-        
-        {/* Navegação */}
-        <ul className='lista-links'>
-          <li>
-            <Link to='/vagas'>Ver Todas as Vagas</Link>
-          </li>
-          <li>
-            <Link to='/bicos'>Bicos e Freelas</Link>
-          </li>
-          <li>
-            <Link to='/empregador'>Sou Empregador</Link>
-          </li>
-          <li>
-            <Link to='/perfil'>Meu Perfil</Link>
-          </li>
-        </ul>
 
       </section>
 

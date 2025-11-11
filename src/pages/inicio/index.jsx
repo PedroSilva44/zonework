@@ -17,10 +17,10 @@ export default function Inicio() {
 
           <ul className='botoes-link'>
           <li>
-            <Link to='/empregador'>Sou Empregador</Link>
+            <Link to='/cadastro'>Sou Empregador</Link>
           </li>
           <li>
-            <Link to='/perfil'>Meu Perfil</Link>
+            <Link to='/cadastro'>Sou Candidato</Link>
           </li>
           </ul>
         </header>

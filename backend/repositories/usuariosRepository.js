@@ -16,6 +16,17 @@ export async function criarUsuario(usuario, email, senha, servico) {
 }
 
 
+// ----------- Entrar usuário ------------
+export async function entrarUsuario(email, senha) {
+  const hash = await bcrypt.hash(senha, 10);
+
+  const comando = `
+    
+  `;
+}
+
+
+
 // ----------- Atualizar perfil -----------
 export async function atualizarUsuario(id, dados) {
   const comando = `

@@ -87,7 +87,7 @@ export default function Empregador() {
         <div className='card-logo'>
         <img src="./zonework1.png" alt='logo do zonework'/>
         </div>
-        <Link to='/' className='logo-link'>
+        <Link to='/home' className='logo-link'>
         <h1 className='titulo1'> 
           ZoneWork
         </h1>
@@ -99,6 +99,8 @@ export default function Empregador() {
           <h1>Portal do Empregador</h1>
           <p>Encontre os talentos certos para sua empresa</p>
         </div>
+
+
 
         {/* Navegação por Abas */}
         <div className="abas-navegacao">
