@@ -15,14 +15,21 @@ export async function criarUsuario(usuario, email, senha, servico) {
   return result.insertId;
 }
 
-
 // ----------- Entrar usuário ------------
-export async function entrarUsuario(email, senha) {
-  const hash = await bcrypt.hash(senha, 10);
 
+export async function entrarUsuario(email, senha) {
   const comando = `
-    
+    SELECT id,
+           email,
+           role,
+           criacao
+      FROM login
+     WHERE email = ?
+       and senha = ?
   `;
+
+  const [registros] = await connection.query(comando, [email, senha]);
+  return registros[0];
 }
 
 
