@@ -34,7 +34,7 @@ export async function entrarUsuario(email, senha) {
 
 
 
-// ----------- Atualizar perfil -----------
+// ----------- Atualizar perfil ----------- 
 export async function atualizarUsuario(id, dados) {
   const comando = `
     UPDATE usuarios

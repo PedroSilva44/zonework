@@ -49,7 +49,6 @@ export default function Home() {
           <option>Até 5km</option>
           <option>Até 10km</option>
           <option>Até 20km</option>
-          <option>Até (CasaDoKrlh)km²</option>
         </select>
         <br /><br />
 
