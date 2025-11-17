@@ -27,11 +27,18 @@ a,a:visited,a:link {
   min-height: 100vh;
   padding-bottom: 1px;
 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;  // centraliza horizontalmente
+  justify-content: flex-start; // ou center, se quiser tudo no meio
+
   .cabecalho {
     background-color: #dadada;
-    padding: 20px 60px;
+    padding: 10px 60px;
     display: flex;
     align-items: center;
+    width: 100%;
     gap: 10px;
 
     .card-logo img {
@@ -101,6 +108,7 @@ a,a:visited,a:link {
     border-radius: 8px;
     margin: 50px 60px;
     max-width: 1200px;
+    width: 70%;
     font: 400 22px 'Poppins';
 
     h1 {

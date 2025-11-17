@@ -1,13 +1,13 @@
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
 
-const KEY = 'borapracima'
-
+const KEY = process.env.JWT_KEY || 'borapracima';
 
 export function generateToken(userInfo) {
-  if (!userInfo.role)
-    userInfo.role = 'user';
+  // garantir que servico exista
+  if (!userInfo.servico)
+    userInfo.servico = 'candidato';
 
-  return jwt.sign(userInfo, KEY)
+  return jwt.sign(userInfo, KEY, { expiresIn: '24h' });
 }
 
 export function getTokenInfo(req) {
@@ -15,7 +15,7 @@ export function getTokenInfo(req) {
     let token = req.headers['x-access-token'];
 
     if (token === undefined)
-      token = req.query['x-access-token']
+      token = req.query['x-access-token'];
 
     let signd = jwt.verify(token, KEY);
     return signd;
@@ -36,15 +36,14 @@ export function getAuthentication(checkRole, throw401 = true) {
       let signd = jwt.verify(token, KEY);
     
       req.user = signd;
-      if (checkRole && !checkRole(signd) && signd.role.type !== 'admin')
+      // checkRole é opcional e pode ser uma função que recebe o payload do token
+      if (checkRole && typeof checkRole === 'function' && !checkRole(signd) && signd.servico !== 'empresa')
         return resp.status(403).end();
     
       next();
     }
-    catch {
+    catch (err) {
       if (throw401) {
-        let error = new Error();
-        error.stack = 'Authentication Error: JWT must be provided';
         resp.status(401).end();
       }
       else {

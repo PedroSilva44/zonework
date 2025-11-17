@@ -9,7 +9,7 @@ export default function Vagas() {
         <div className='card-logo'>
         <img src="./zonework1.png" alt='logo do zonework'/>
         </div>
-        <Link to='/' className='logo-link'>
+        <Link to='/home' className='logo-link'>
         <h1 className='titulo1'> 
           ZoneWork
         </h1>

@@ -22,6 +22,9 @@ export default function Inicio() {
           <li>
             <Link to='/cadastro'>Sou Candidato</Link>
           </li>
+          <li>
+            <Link to='/home'>Teste Mobile</Link>
+          </li>
           </ul>
         </header>
 
